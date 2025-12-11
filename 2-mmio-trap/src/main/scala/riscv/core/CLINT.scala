@@ -116,6 +116,7 @@ class CLINT extends Module {
     // 1. Set MPP to 0b11 (Machine mode)
     // 2. Save current MIE to MPIE (bit 7)
     // 3. Clear MIE (bit 3) to disable interrupts
+
     io.csr_bundle.mstatus_write_data :=
       Cat(
         io.csr_bundle.mstatus(31, 13),
@@ -191,6 +192,8 @@ class CLINT extends Module {
     // 1. Set MPP to 0b11 (Machine mode, for M-mode only systems)
     // 2. Set MPIE to 1 (bit 7)
     // 3. Restore MIE from MPIE (bit 3 ← bit 7)
+
+
     io.csr_bundle.mstatus_write_data :=
       Cat(
         io.csr_bundle.mstatus(31, 13),

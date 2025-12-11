@@ -26,3 +26,4 @@ hart0:
   physical_addr_sz: 32
   supported_xlen: [32]
 hart_ids: [0]
+
